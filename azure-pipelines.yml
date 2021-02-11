@@ -1,4 +1,12 @@
 # Maven
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(15b6ec7f-20dc-425e-a57e-a1c7bc8cc908)'
+    appType: 'webAppLinux'
+    WebAppName: 'time-tracker-instance'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jsp'
+    RuntimeStack: 'JAVA|11-java11'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
